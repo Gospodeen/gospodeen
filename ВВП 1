@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Labka1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("Введите номер задания (1-5):");
+                float x, y;
+                int k = int.Parse(Console.ReadLine());
+                switch (k)
+                {
+                    case 1:
+                        {
+                            Console.WriteLine("Введите стороны прямоугольника a и b:");
+                            x = float.Parse(Console.ReadLine());
+                            y = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Площадь прямоугольника равна " + (x * y) + ", а его периметр " + ((x + y) * 2));
+                            Console.ReadLine();
+                        }
+                        break;
+                    case 2:
+                        {
+                            Console.WriteLine("Введите диаметр окружности d:");
+                            x = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Длина окружности равна " + (x * 3.14));
+                            Console.ReadLine();
+                        }
+                        break;
+                    case 3:
+                        {
+                            Console.WriteLine("Введите числа a и b для вычисления среднего арифметического:");
+                            x = float.Parse(Console.ReadLine());
+                            y = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Среднее арифметическое этих чисел равно " + (x + y) / 2);
+                            Console.ReadLine();
+                        }
+                        break;
+                    case 4:
+                        {
+                            Console.WriteLine("Введите два ненулевых числа a и b:");
+                            x = float.Parse(Console.ReadLine());
+                            y = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Сумма квадратов этих чисел равна " + (x * x + y * y));
+                            Console.WriteLine("Разность квадратов этих чисел равна " + (x * x - y * y));
+                            Console.WriteLine("Произведение квадратов этих чисел равно " + (x * x * y * y));
+                            Console.WriteLine("Частное квадратов этих чисел равно " + (x * x / (y * y)));
+                            Console.ReadLine();
+                        }
+                        break;
+                    case 5:
+                        {
+                            Console.WriteLine("Введите два ненулевых числа a и b:");
+                            x = float.Parse(Console.ReadLine());
+                            y = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Сумма модулей этих чисел равна " + (Math.Abs(x) + Math.Abs(y)));
+                            Console.WriteLine("Разность модулей этих чисел равна " + (Math.Abs(x) - Math.Abs(y)));
+                            Console.WriteLine("Произведение модулей этих чисел равно " + (Math.Abs(x) * Math.Abs(y)));
+                            Console.WriteLine("Частное модулей этих чисел равно " + (Math.Abs(x) / Math.Abs(y)));
+                            Console.ReadLine();
+                        }
+                        break;
+                }
+            }
+        }
+    }
+}
