@@ -1,0 +1,76 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	int menu, a, b, c, x1, x2, x3, y1, y2, y3;
+	while (true) {
+		cout << "Введите номер задания (1-7): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите A,B: ";
+			cin >> a >> b;
+			if (a > b) b = a;
+			else if (b > a) a = b;
+			else if (a == b) { a = 0; b = 0; }
+			cout << "Теперь А = " << a << ", B = " << b << "." << endl;
+		} break;
+
+		case 2:
+		{
+			cout << "Введите A,B,C: ";
+			cin >> a >> b >> c;
+			if ((a >= b) && (b >= c)) cout << "Сумма двух наибольших равна " << a + b << "." << endl;
+			else if ((a >= c) && (c >= b)) cout << "Сумма двух наибольших равна " << a + c << "." << endl;
+			else if ((c >= b) && (b >= a)) cout << "Сумма двух наибольших равна " << b + c << "." << endl;
+		} break;
+		case 3:
+		{
+			cout << "Введите координаты на плоскости точек A,B,C: ";
+			cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+			if (sqrt(pow(x2-x1,2) + pow(y2 - y1, 2)) >= sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2))) cout << "B("<< x2 << "," << y2 << "), ближайшая точка к точке А, лежит от неё на расстоянии " << sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)) << "." << endl;
+			else cout << "C(" << x3 << "," << y3 << "), ближайшая точка к точке А, лежит от неё на расстоянии " << sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2)) << "." << endl;
+		} break;
+		case 4:
+		{
+			cout << "Введите координаты на плоскости точки А: ";
+			cin >> x1 >> y1;
+			if ((x1 > 0) &&(y1 > 0)) cout << "Точка лежит в первой четверти. " << endl;
+			else if ((x1 < 0) && (y1 > 0)) cout << "Точка лежит во второй четверти. " << endl;
+			else if ((x1 < 0) && (y1 < 0)) cout << "Точка лежит в третьей четверти. " << endl;
+			else if ((x1 > 0) && (y1 < 0)) cout << "Точка лежит в четвёртой четверти. " << endl;
+			else cout << "Точка лежит на осях координат. " << endl;
+		} break;
+		case 5:
+		{
+			cout << "Введите число в диапазоне 1 - 999: ";
+			cin >> a;
+			if (a == 0) cout << "Нулевое число." << endl;
+			else if (a < 0) cout << "Отрицательное ";
+			else  cout << "Положительное ";
+			if (a != 0) 
+			{
+				if (a % 2 == 0) cout << "чётное число. " << endl;
+				else cout << "нечётное число. " << endl;
+			}
+		} break;
+		case 6:
+		{
+			cout << "Введите число в диапазоне 1 - 999: ";
+			cin >> a;
+			if (a < 10) cout << "Однозначное ";
+			else if (a < 100) cout << "Двузначное ";
+			else cout << "Трёхзначное ";
+			if (a % 2 == 0) cout << "чётное число. " << endl;
+			else cout << "нечётное число. " << endl;
+		} break;
+		}
+	}
+}
