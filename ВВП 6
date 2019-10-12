@@ -1,0 +1,52 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	float x, y, t, x2, y2;
+	int menu, a, b, c;
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите количество секунд с начала суток: ";
+			cin >> a;
+			cout << "С последней минуты прошло " << a % 60 << " секунд(ы). " << endl;
+		} break;
+
+		case 2:
+		{
+			cout << "Введите номер дня года: ";
+			cin >> a;
+			cout << "Номер дня недели - " << a % 7 << "." << endl;
+		} break;
+		case 3:
+		{
+			cout << "Введите номер дня года: ";
+			cin >> a;
+			cout << "Введите номер дня недели 1 января: ";
+			cin >> b;
+			cout << "Номер дня недели для введённого дня года - " << (a + b - 2) % 7 + 1 << "." << endl;
+		} break;
+		case 4:
+		{
+			cout << "Дан прямоугольник AxB и квадрат со стороной С. Введите A,B,C: ";
+			cin >> a >> b >> c;
+			cout << "В прямоугольнике " << a/c * b/c << " квадратов, площадь незанятой части равна " << a * b - ((a / c * b / c) * c * c) << "." << endl;
+		} break;
+		case 5:
+		{
+			cout << "Введите год: ";
+			cin >> a;
+			cout << "Это " << (a - 1)/100 + 1 << " столетие." << endl;
+		} break;
+		}
+	}
+}
