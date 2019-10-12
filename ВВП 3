@@ -1,0 +1,91 @@
+#include "stdafx.h"
+#include <iostream>
+#include <Math.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	float a, b, c, d;
+	int menu, i;
+	while (true){
+		cout << "Введите номер задания (1-7): ";
+		cin >> menu;
+		switch (menu)
+		{
+			case 1:
+			{
+				cout << "Введите число А: ";
+				cin >> a;
+				cout << "Введите число B: ";
+				cin >> b;
+				c = a;
+				a = b;
+				b = c;
+				cout << "Теперь A = " << a << ", а B = " << b << endl;
+			} break;
+
+			case 2:
+			{
+				cout << "Введите число А: ";
+				cin >> a;
+				cout << "Введите число B: ";
+				cin >> b;
+				cout << "Введите число C: ";
+				cin >> c;
+				d = c;
+				c = b;
+				b = a;
+				a = d;
+				cout << "Теперь A = " << a << ", а B = " << b << ", а C = " << c << endl;
+			} break;
+			case 3:
+			{
+				cout << "Введите число А: ";
+				cin >> a;
+				cout << "Введите число B: ";
+				cin >> b;
+				cout << "Введите число C: ";
+				cin >> c;
+				d = a;
+				a = b;
+				b = c;
+				c = d;
+				cout << "Теперь A = " << a << ", а B = " << b << ", а C = " << c << endl;
+			} break;
+			case 4:
+			{
+				cout << "y = 3x^6 - 6x^2 - 7. Введите значение х: ";
+				cin >> a;
+				cout << "y = " << (3*pow(a,6) - 6*pow(a,2) - 7) << " при x = " << a << endl;
+			} break;
+			case 5:
+			{
+				cout << "y = 4(x-3)^6 - 7(x-3)^3 +2. Введите значение х: ";
+				cin >> a;
+				cout << "y = " << (4 * pow((a - 3), 6) - 7 * pow((a - 3), 3) + 2) << " при x = " << a << endl;
+			} break;
+			case 6:
+			{
+				cout << "Введите значение A: ";
+				cin >> a;
+				for (i = 0; i<3; i++) {
+					a = a*a;
+				}
+				cout << "A^8 = " << a << endl;
+			} break;
+			case 7:
+			{
+				cout << "Введите значение A: ";
+				cin >> a;
+				c = 1 / a;
+				for (i = 0; i<4; i++) {
+					a = a*a;
+				}
+				a = a * c;
+				cout << "A^15 = " << a << endl;
+			} break;
+		}
+	}
+}
