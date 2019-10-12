@@ -1,0 +1,56 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	float x, y, t, x2, y2;
+	int menu, a, b, c;
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите размер файла в байтах: ";
+			cin >> a;
+			cout << "Такой файл весит полных " << a/1024 << "Кб. " << endl;
+		} break;
+
+		case 2:
+		{
+			cout << "Введите длины отрезков А и В (A > B): ";
+			cin >> a >> b;
+			cout << "В отрезок А помещается " << a/b << " отрезков В." << endl;
+		} break;
+		case 3:
+		{
+			cout << "Введите длины отрезков А и В (A > B): ";
+			cin >> a >> b;
+			cout << "После помещения отрезков B в А, незанятая часть равна " << a % b << "." << endl;
+		} break;
+		case 4:
+		{
+			cout << "Введите двузначное число: ";
+			cin >> a;
+			cout << "Число " << a << " после перестановки цифр превратилось в " << (a%10)*10 + a/10 << "." << endl;
+		} break;
+		case 5:
+		{
+			cout << "Введите трёхзначное число: ";
+			cin >> a;
+			cout << "Число " << a << " после перемещения первой цифры в конец превратилось в " << (a-((a / 100) * 100)) * 10 + (a / 100) << "." << endl;
+		} break;
+		case 6:
+		{
+			cout << "Имеется система уравнений вида A1x + B1y = C1, A2x + B2y = C2. Введите A1, B1, C1, A2, B2, C2: ";
+			cin >> a >> x >> y >> t >> x2 >> y2;
+			cout << "Корни: x = " << (x*y2 - x2 * y) / (x*t - x2 * a) << ", y = " << (a*y2 - t * y) / (a*x2 - t * x) << "." << endl;
+		} break;
+		}
+	}
+}
