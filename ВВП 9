@@ -1,0 +1,247 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	int menu, a, b, c, x1, x2, x3, y1, y2, y3;
+	char ch = ' ';
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите дату в формате (ДД ММ): ";
+			cin >> a >> b;
+			switch (a)
+			{
+			case 1: cout << "Первое "; break;
+			case 2: cout << "Второе "; break;
+			case 3: cout << "Третье "; break;
+			case 4: cout << "Четвёртое "; break;
+			case 5: cout << "Пятое "; break;
+			case 6: cout << "Шестое "; break;
+			case 7: cout << "Седьмое "; break;
+			case 8: cout << "Восьмое "; break;
+			case 9: cout << "Девятое "; break;
+			case 10: cout << "Десятое "; break;
+			case 11: cout << "Одиннадцатое "; break;
+			case 12: cout << "Двенадцатое "; break;
+			case 13: cout << "Тринадцатое "; break;
+			case 14: cout << "Четырнадцатое "; break;
+			case 15: cout << "Пятнадцатое "; break;
+			case 16: cout << "Шестнадцатое "; break;
+			case 17: cout << "Семнадцатое "; break;
+			case 18: cout << "Восемнадцатое "; break;
+			case 19: cout << "Девятнадцатое "; break;
+			case 20: cout << "Двадцаое "; break;
+			case 21: cout << "Двадцать первое "; break;
+			case 22: cout << "Двадцать второе "; break;
+			case 23: cout << "Двадцать третье "; break;
+			case 24: cout << "Двадцать четвёртое "; break;
+			case 25: cout << "Двадцать пятое "; break;
+			case 26: cout << "Двадцать шестое "; break;
+			case 27: cout << "Двадцать седьмое "; break;
+			case 28: cout << "Двадцать восьмое "; break;
+			case 29: cout << "Двадцать девятое "; break;
+			case 30: cout << "Тридцатое "; break;
+			case 31: cout << "Тридцать первое "; break;
+			default:
+				break;
+			}
+			switch (b)
+			{
+			case 1: cout << "января." << endl; break;
+			case 2: cout << "февраля." << endl; break;
+			case 3: cout << "марта." << endl; break;
+			case 4: cout << "апреля." << endl; break;
+			case 5: cout << "мая." << endl; break;
+			case 6: cout << "июня." << endl; break;
+			case 7: cout << "июля." << endl; break;
+			case 8: cout << "августа." << endl; break;
+			case 9: cout << "сентября." << endl; break;
+			case 10: cout << "октября." << endl; break;
+			case 11: cout << "ноября." << endl; break;
+			case 12: cout << "декабря." << endl; break;
+			default: cout << endl; break;
+			}
+		} break;
+
+		case 2:
+		{
+			cout << "Введите сторону света (С, З, Ю, В) и команду [-1,1]: ";
+			cin >> ch >> a;
+			switch (ch)
+			{
+			case 'С': switch (a)
+			{
+			case -1: cout << "Робот направлен на восток." << endl; break;
+			case 0: cout << "Робот направлен на север." << endl; break;
+			case 1: cout << "Робот направлен на запад." << endl; break;
+			}break;
+			case 'З': switch (a)
+			{
+			case -1: cout << "Робот направлен на север." << endl; break;
+			case 0: cout << "Робот направлен на запад." << endl; break;
+			case 1: cout << "Робот направлен на юг." << endl; break;
+			}break;
+			case 'Ю': switch (a)
+			{
+			case -1: cout << "Робот направлен на запад." << endl; break;
+			case 0: cout << "Робот направлен на юг." << endl; break;
+			case 1: cout << "Робот направлен на восток." << endl; break;
+			}break;
+			case 'В': switch (a)
+			{
+			case -1: cout << "Робот направлен на юг." << endl; break;
+			case 0: cout << "Робот направлен на восток." << endl; break;
+			case 1: cout << "Робот направлен на север." << endl; break;
+			}break;
+			}
+		} break;
+		case 3:
+		{
+			cout << "Введите число в диапазоне 10-40: ";
+			cin >> a;
+			switch (a / 10) 
+			{
+			case 2: cout << "Двадцать "; break;
+			case 3: cout << "Тридцать "; break;
+			case 4: cout << "Сорок "; break;
+			}
+			if (a/10 == 1)
+				switch (a)
+				{
+				case 10: cout << "Десять "; break;
+				case 11: cout << "Одиннадцать "; break;
+				case 12: cout << "Двенадцать "; break;
+				case 13: cout << "Тринадцать "; break;
+				case 14: cout << "Четырнадцать "; break;
+				case 15: cout << "Пятнадцать"; break;
+				case 16: cout << "Шестнадцать "; break;
+				case 17: cout << "Семнадцать "; break;
+				case 18: cout << "Восемнадцать "; break;
+				case 19: cout << "Девятнадцать "; break;
+				}
+			else
+			switch (a % 10) 
+			{
+			case 1: cout << "одно "; break;
+			case 2: cout << "два "; break;
+			case 3: cout << "три "; break;
+			case 4: cout << "четыре "; break;
+			case 5: cout << "пять "; break;			
+			case 6: cout << "шесть "; break;
+			case 7: cout << "семь "; break;
+			case 8: cout << "восемь "; break;
+			case 9: cout << "девять "; break;
+			}
+				if ((a % 10 == 1) && (a/10 != 1)) cout << "учебное задание." << endl;
+				else cout << "учебных заданий." << endl;
+		} break;
+		case 4:
+		{
+			cout << "Введите число в диапазоне 100-999: ";
+			cin >> a;
+			switch (a / 100)
+			{
+			case 1: cout << "Сто "; break;
+			case 2: cout << "Двести "; break;
+			case 3: cout << "Триста "; break;
+			case 4: cout << "Четыреста "; break;
+			case 5: cout << "Пятьсот "; break;
+			case 6: cout << "Шестьсот "; break;
+			case 7: cout << "Семьсот "; break;
+			case 8: cout << "Восемьсот "; break;
+			case 9: cout << "Девятьсот "; break;
+			}
+			if (a % 100 == 0) cout << endl;
+			switch ((a / 10)%10)
+			{
+			case 2: cout << "двадцать "; break;
+			case 3: cout << "тридцать "; break;
+			case 4: cout << "сорок "; break;
+			case 5: cout << "пятьдесят "; break;
+			case 6: cout << "шестьдесят "; break;
+			case 7: cout << "семьдесят "; break;
+			case 8: cout << "восемьдесят "; break;
+			case 9: cout << "девяносто "; break;
+			}
+			if (a % 10 == 0) cout << endl;
+			if ((a / 10) % 10 == 1)
+				switch ((a % 100))
+				{
+				case 10: cout << "десять "; break;
+				case 11: cout << "одиннадцать "; break;
+				case 12: cout << "двенадцать "; break;
+				case 13: cout << "тринадцать "; break;
+				case 14: cout << "четырнадцать "; break;
+				case 15: cout << "пятнадцать"; break;
+				case 16: cout << "шестнадцать "; break;
+				case 17: cout << "семнадцать "; break;
+				case 18: cout << "восемнадцать "; break;
+				case 19: cout << "девятнадцать "; break;
+				}
+			else
+				switch (a % 10)
+				{
+				case 1: cout << "один "; break;
+				case 2: cout << "два "; break;
+				case 3: cout << "три "; break;
+				case 4: cout << "четыре "; break;
+				case 5: cout << "пять "; break;
+				case 6: cout << "шесть "; break;
+				case 7: cout << "семь "; break;
+				case 8: cout << "восемь "; break;
+				case 9: cout << "девять "; break;
+					if (a % 10 == 0) cout << endl;
+				}
+		} break;
+		case 5:
+		{
+			cout << "Введите год: ";
+			cin >> a;
+			cout << "Год ";
+			if (a > 1983) a = (a - 1984) % 60 + 1;
+			else a = 61 - (1984 - a) % 60;
+			switch (((a - 1) % 10)/2 + 1)
+			{
+			case 1: cout << "зелёно"; break;
+			case 2: cout << "красно"; break;
+			case 3: cout << "жёлто"; break;
+			case 4: cout << "бело"; break;
+			case 5: cout << "чёрно"; break;
+			}
+			switch ((a - 1) % 12 + 1)
+			{
+			case 3: cout << "го "; break;
+			case 4: cout << "го "; break;
+			case 5: cout << "го "; break;
+			default: cout << "й "; break;
+			}
+			switch ((a - 1) % 12 + 1)
+			{
+			case 1: cout << "крысы" << endl; break;
+			case 2: cout << "коровы" << endl; break;
+			case 3: cout << "тигра" << endl; break;
+			case 4: cout << "зайца" << endl; break;
+			case 5: cout << "дракона" << endl; break;
+			case 6: cout << "змеи" << endl; break;
+			case 7: cout << "лошади" << endl; break;
+			case 8: cout << "овцы" << endl; break;
+			case 9: cout << "обезьяны" << endl; break;
+			case 10: cout << "курицы" << endl; break;
+			case 11: cout << "собаки" << endl; break;
+			case 12: cout << "свиньи" << endl; break;
+		} break;
+		}
+	}
+}
