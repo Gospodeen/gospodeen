@@ -1,0 +1,83 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	float x, y;
+	int menu, a, b, c, i, j;
+	char ch = ' ';
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите целые положительные числа А и В (A < B): ";
+			cin >> a >> b;
+			for (i = a; i <= b; i++)
+			{
+				for (j = 1; j <= i; j++) cout << a << endl;
+			}
+		} break;
+
+		case 2:
+		{
+			cout << "Введите целые положительные числа А и В (A > B): ";
+			cin >> a >> b;
+			while (a >= b) 
+			{
+				a -= b;
+			}
+			cout << "Незанятая часть отрезка равна " << a << "." << endl;
+		} break;
+
+		case 3:
+		{
+			cout << "Введите целое число N: ";
+			cin >> a;
+			b = 1;
+			c = 1;
+			while (c < a)
+			{
+				b++;
+				c += b;
+			}
+			cout << "K = " << b << ", а сумма равна " << c << "." << endl;
+		} break;
+
+		case 4:
+		{
+			cout << "На вкладе 1000 рублей. Введите P процентов прироста (1-25): ";
+			cin >> a;
+			x = 1000;
+			b = 0;
+			while (x < 1100)
+			{
+				b++;
+				x *= (a*0.01 + 1);
+			}
+			cout << "Месяц " << b << ": вклад стал равен " << x << "." << endl;
+		} break;
+
+		case 5:
+		{
+			cout << "Введите два целых положительных числа A и B: ";
+			cin >> a >> b;
+			while (a != b)
+			{
+				if (a > b) a -= b;
+				else b -= a;
+			}
+			cout << "НОД этих чисел равен " << a << "." << endl;
+		} break;
+		}
+	}
+}
