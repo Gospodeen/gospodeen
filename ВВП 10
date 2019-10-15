@@ -1,0 +1,82 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	float x, y;
+	int menu, a, b, c, i;
+	char ch = ' ';
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите цену за кило конфет в рублях: ";
+			cin >> x;
+			for (i = 1; i <= 10; i++)
+			{
+				cout << i * 0.1 << " кг конфет стоит " << x * i / 10 << " рублей." << endl;
+			}
+		} break;
+
+		case 2:
+		{
+			cout << "Введите целое число: ";
+			cin >> a;
+			x = 1;
+			for (i = 1; i <= a; i++)
+			{
+				x *= (1 + i * 0.1);
+			}
+			cout << "Результат равен " << x << "." << endl;
+		} break;
+
+		case 3:
+		{
+			cout << "Введите целое число: ";
+			cin >> a;
+			b = 0;
+			for (i = 1; i <= a; i++)
+			{
+				b += 2 * i - 1;
+				cout << b << endl;
+			}
+		} break;
+
+		case 4:
+		{
+			cout << "Введите вещественное число А и целое число N: ";
+			cin >> x >> a;
+			y = 0;
+			for (i = 0; i <= a; i++)
+			{
+				y += pow(x, i);
+			}
+			cout << "Результат равен " << y << "." << endl;
+		} break;
+
+		case 5:
+		{
+			cout << "Введите вещественное число А и целое число N: ";
+			cin >> x >> a;
+			y = 0;
+			b = -1;
+			for (i = 0; i <= a; i++)
+			{
+				b = -b;
+				y += (pow(x, i) * b);
+			}
+			cout << "Результат равен " << y << "." << endl;
+		} break;
+		}
+	}
+}
