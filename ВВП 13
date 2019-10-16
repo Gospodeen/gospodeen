@@ -1,0 +1,120 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	float x, y;
+	int menu, a, b, c, i, j;
+	float br[5];
+	int *arr;
+	char ch = ' ';
+	while (true) {
+		cout << "Введите номер задания (1-5): ";
+		cin >> menu;
+		switch (menu)
+		{
+		case 1:
+		{
+			cout << "Введите размер массива N (N > 0): ";
+			cin >> a;
+			arr = new int[a];
+			for (i = 0; i < a; i++)
+			{
+				arr[i] = 2 * i + 1;
+				cout << i + 1 << ": " << arr[i] << "." << endl;
+			}
+		} break;
+
+		case 2:
+		{
+			cout << "Введите размер массива N (N > 0), A, D: ";
+			cin >> a >> b >> c;
+			arr = new int[a];
+			for (i = 0; i < a; i++)
+			{
+				arr[i] = b * pow(c, i);
+				cout << i + 1 << ": " << arr[i] << "." << endl;
+			}
+		} break;
+
+		case 3:
+		{
+			cout << "Введите размер массива N (N > 2), A, B: ";
+			cin >> a >> b >> c;
+			arr = new int[a];
+			arr[0] = b;
+			arr[1] = c;
+			cout << "1: " << arr[0] << "." << endl;
+			cout << "2: " << arr[1] << "." << endl;
+			for (i = 2; i < a; i++)
+			{
+				arr[i] = 0;
+				for (j = 0; j < i; j++) arr[i] += arr[j];
+				cout << i + 1 << ": " << arr[i] << "." << endl;
+			}
+		} break;
+
+		case 4:
+		{
+			cout << "Введите размер массива N и заполните его: ";
+			cin >> a;
+			arr = new int[a];
+			for (i = 0; i < a; i++)
+			{
+				cin >> arr[i];
+			}
+			b = 0;
+			c = a;
+			cout << "Изменённый массив: " << endl;
+			for (i = 0; i < a; i++)
+			{
+				if (i % 2 == 0)
+				{
+					cout << b + 1 << ": " << arr[b] << "." << endl;
+					b++;
+				}
+				else 
+				{
+					cout << c << ": " << arr[c-1] << "." << endl;
+					c--;
+				}
+			}
+		} break;
+
+		case 5:
+		{
+			cout << "Введите размер массива N и заполните его: ";
+			cin >> a;
+			arr = new int[a];
+			for (i = 0; i < a; i++)
+			{
+				cin >> arr[i];
+			}
+			b = 0;
+			c = a;
+			cout << "Изменённый массив: " << endl;
+			for (i = 0; i < a; i++)
+			{
+				if (i % 2 == 0)
+				{
+					cout << i + 1 << ": " << arr[i] << "." << endl;
+				}
+			}
+			for (i = a-1; i >= 0; i--)
+			{
+				if (i % 2 != 0)
+				{
+					cout << i + 1 << ": " << arr[i] << "." << endl;
+				}
+			}
+		} break;
+		}
+	}
+}
