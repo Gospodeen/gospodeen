@@ -1,0 +1,10 @@
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\bin\Debug\CalculatorSharp.exe.config
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\bin\Debug\CalculatorSharp.exe
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\bin\Debug\CalculatorSharp.pdb
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.csprojAssemblyReference.cache
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.Form1.resources
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.Properties.Resources.resources
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.csproj.GenerateResource.cache
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.csproj.CoreCompileInputs.cache
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.exe
+C:\Users\gosp0\source\repos\CalculatorSharp\CalculatorSharp\obj\Debug\CalculatorSharp.pdb
